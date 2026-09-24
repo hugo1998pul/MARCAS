@@ -1,0 +1,36 @@
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding-left: 90px;
+width: 80%;
+font-size: 25px;
+}
+nav{
+display: block;
+width: 99.85%;
+margin:0;
+border: 2px solid orangered;
+border-bottom: 25px solid orangered;
+}
+li{
+display: inline-block;
+margin: 10px;   
+width: 20%;
+color: orangered;
+text-align: center;
+}
+main{
+border: 2px solid orangered;
+margin: 0;
+padding-left: 55px;
+}
+p{
+    text-align:center;
+}
+h1 ,h2{
+    color: orangered;
+}
+
+img{
+    width: 20%;
+    padding-left: 40%;
+}
