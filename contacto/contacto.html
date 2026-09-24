@@ -3,18 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Mapa de Destinos Interactivo</title>
+    
+    <!-- 1. Cargar el CSS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .controles {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        /* 2. Definir el tamaño del contenedor del mapa (Obligatorio) */
+        #mi-mapa {
+            height: 450px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Contacto</h1>
-        <a href="#contenido">Contendio</a>
-        <a href="https://cdmpf.es" target="ventana" title="ir a la pagina oficial">CDMFP</a>
-        <a href="contacto.html">Contacto</a>
-    </header>
-    <main>
-        <p>si quieres contactar conmigo escribeme a <a href="mailito;hugobs03@gmail.com">hugobs03@gmail.com</a></p>
-    </main>
-    <footer> &copy; 2026 Hugo Puente Pulupa </footer>
+
+   <!-- 1. El selector actualizado con data-id -->
+<div class="controles">
+    <label for="selector-destino"><strong>Selecciona un destino:</strong></label>
+    <select id="selector-destino" onchange="actualizarMapa()">
+        <option value="27.9202,-15.5474" data-id="info-canarias">Gran Canaria, España</option>
+        <option value="41.9028,12.4964" data-id="info-roma">Roma, Italia</option>
+        <option value="19.4326,-99.1332" data-id="info-cdmx">Ciudad de México, México</option>
+    </select>
+</div>
+
+<!-- El contenedor del mapa -->
+<div id="mi-mapa"></div>
+
+<!-- 2. Los bloques de información -->
+<div id="contenedor-informacion" style="margin-top: 20px;">
+    
+    <!-- Bloque Gran Canaria (Visible por defecto) -->
+    <div id="info-canarias" class="tarjeta-destino" style="display: block;">
+        <h2>Explora Gran Canaria</h2>
+        <p>Vuelos programados, rutas en coche y los mejores lugares para visitar en la isla.</p>
+        <button>Ver itinerario completo</button>
+    </div>
+
+    <!-- Bloque Roma (Oculto por defecto) -->
+    <div id="info-roma" class="tarjeta-destino" style="display: none;">
+        <h2>Descubre Roma</h2>
+        <p>Historia, monumentos y la mejor gastronomía italiana (carbonara, auténtica pizza).</p>
+        <button>Ver itinerario completo</button>
+    </div>
+
+    <!-- Bloque CDMX (Oculto por defecto) -->
+    <div id="info-cdmx" class="tarjeta-destino" style="display: none;">
+        <h2>Visita Ciudad de México</h2>
+        <p>Cultura, ruinas aztecas y comida callejera espectacular como las carnitas.</p>
+        <button>Ver itinerario completo</button>
+    </div>
+
+</div>
+
+    <!-- Contenedor donde se renderiza el mapa -->
+    <div id="mi-mapa"></div>
+
+    <!-- 3. Cargar el JavaScript de Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script>
+        // 4. Inicializar el mapa con las coordenadas por defecto (Gran Canaria)
+        let mapa = L.map('mi-mapa').setView([27.9202, -15.5474], 10);
+
+        // 5. Añadir la capa visual del mapa (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(mapa);
+
+        // 6. Crear un marcador inicial
+        let marcador = L.marker([27.9202, -15.5474]).addTo(mapa);
+        marcador.bindPopup("<b>Gran Canaria</b><br>Destino seleccionado.").openPopup();
+
+        // 7. Función que se ejecuta al cambiar el <select>
+// ... (El código de inicialización del mapa de Leaflet se queda igual) ...
+
+function actualizarMapa() {
+    const selector = document.getElementById('selector-destino');
+    const opcionSeleccionada = selector.options[selector.selectedIndex];
+    const nombreDestino = opcionSeleccionada.text;
+    
+    // 1. Mover el mapa (igual que antes)
+    const coordenadas = selector.value.split(',');
+    const lat = parseFloat(coordenadas[0]);
+    const lng = parseFloat(coordenadas[1]);
+
+    mapa.flyTo([lat, lng], 12, { animate: true, duration: 1.5 });
+    marcador.setLatLng([lat, lng]);
+    marcador.bindPopup(`<b>${nombreDestino}</b>`).openPopup();
+
+    // 2. LÓGICA PARA MOSTRAR LA INFORMACIÓN
+    // Primero, ocultamos TODAS las tarjetas de información
+    const todasLasTarjetas = document.querySelectorAll('.tarjeta-destino');
+    todasLasTarjetas.forEach(tarjeta => {
+        tarjeta.style.display = 'none';
+    });
+
+    // Luego, obtenemos el ID de la tarjeta que queremos mostrar
+    const idMostrar = opcionSeleccionada.getAttribute('data-id');
+    
+    // Y finalmente, la hacemos visible
+    if (idMostrar) {
+        document.getElementById(idMostrar).style.display = 'block';
+    }
+}
+        
+    </script>
 </body>
 </html>
