@@ -1,11 +1,11 @@
 body{
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-padding-left: 90px;
-width: 80%;
+margin: auto;
+width: 50%;
 font-size: 25px;
+
 }
 nav{
-display: block;
 width: 99.85%;
 margin:0;
 border: 2px solid orangered;
@@ -14,7 +14,7 @@ border-bottom: 25px solid orangered;
 li{
 display: inline-block;
 margin: 10px;   
-width: 20%;
+width: 22%;
 color: orangered;
 text-align: center;
 }
@@ -28,9 +28,16 @@ p{
 }
 h1 ,h2{
     color: orangered;
+    text-align: center;
 }
 
 img{
     width: 20%;
     padding-left: 40%;
+}
+footer{
+    border: 2px solid orangered;
+    background-color: orangered;
+    text-align: center;
+    color: white;
 }
