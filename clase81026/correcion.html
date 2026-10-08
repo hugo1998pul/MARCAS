@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clases</title>
+    <style>
+        body{
+            width: 1000px;
+            margin: 30px auto;
+            border: 2px solid black;
+        }
+        p{
+            text-align: center;
+        }
+        span{
+            padding: 50px;
+            background-color: red;
+            display: inline-block;
+            margin: 10px;
+            border: 2px solid black;
+        }
+        span+span{
+            background-color: orange;
+        }
+        span+span+span{
+            background-color: blueviolet;
+        }
+        p~p>span{
+            background-color:saddlebrown;
+        }
+        p~p>span+span{
+            background-color: yellow;
+        }
+        p~p>span+span+span{
+            background-color: blue;
+        }
+        p~p+p>span{
+            background-color: brown;
+        }
+        p~p+p>span+span{
+            background-color: crimson;
+        }
+        p~p+p>span+span+span{
+            background-color: indigo;
+        }
+    </style>
+</head>
+<body>
+    <p><span>1</span><span>2</span><span>3</span></p>
+    <p><span>4</span><span>5</span><span>6</span></p>
+    <p><span>7</span><span>8</span><span>9</span></p>
+</body>
+</html>
