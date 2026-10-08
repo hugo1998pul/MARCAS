@@ -1,0 +1,43 @@
+body{
+    width: 40%;
+    margin: 35px auto;
+    padding-left: 8%;
+    border: 1px solid black;
+}
+section{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color: red;
+    text-align: center;
+}
+p{
+    text-align:center;
+    vertical-align: middle;
+    margin: 50%;
+}
+section+section{
+    background-color: blue;
+}
+section+section+section{
+    background-color: darkgreen;
+}
+section+section+section+section{
+    background-color: yellow;
+}
+section+section+section+section+section{
+    background-color: magenta;
+}
+section+section+section+section+section+section{
+    background-color: green;
+}
+section+section+section+section+section+section+section{
+    background-color: darkblue;
+}
+section+section+section+section+section+section+section+section{
+    background-color: chocolate;
+}
+section+section+section+section+section+section+section+section+section{
+    background-color: orangered;
+}
