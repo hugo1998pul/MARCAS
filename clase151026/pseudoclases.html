@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseuclases</title>
+    <style>
+        p{
+            border: 1px solid black;
+        }
+        p:first-child{
+            background-color: red;
+        }
+        p:last-child{
+            background-color: green;
+        }
+        p:nth-child(3){
+            background-color: blue;
+        }
+        section:nth-of-type(1) p:first-of-type{
+            background-color: yellow;
+        }
+        div:first-of-type{
+            background-color: purple;
+        }
+        ol{
+            padding: 0;
+            font-size: 0;
+        }
+        li{
+            display: inline-block;
+            width: 25%;
+            height: 30px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            border-right: 1px solid white;
+            box-sizing: border-box;
+        }
+        li:last-of-type{
+            border-right: none;
+        }
+        section:nth-of-type(2)>p:first-of-type{
+            background-color: orange;
+        }
+        nav:only-of-type{
+            margin: 50px;
+        }
+        span:nth-child(-n+4){
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título de la página</h1>
+        <h2>subtítulo</h2>
+        <p>parrafo 1</p>
+    <section>
+        <p>parrafo 2</p>
+        <p>parrafo 3</p>
+    </section>
+    <section>
+        <p>parrafo 4</p>
+        <p>parrafo 5</p>
+        <p>parrafo 6</p>
+    </section>
+    <section>
+        <div>Hola, sou un div</div>
+    </section>
+    <footer>
+        <nav>
+            <ol>
+                <li>navegacion 1</li>
+                <li>navegacion 2</li>
+                <li>navegacion 3</li>
+                <li>navegacion 4</li>
+            </ol>
+        </nav>
+    </footer>
+    <blockquote><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span>9<span></span>10</blockquote>
+    
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+    <style>
+        a{
+            color: red;
+        }
+        a:link{
+            color: blue;
+        }
+        a:visited{
+            color:seagreen ;
+        }
+        p:target{
+            font-size: 3rem,;
+            color: red;
+        }
+        p:empty{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        p:not(:empty){
+            background-color: yellow;
+        }
+        p:not(#dos){
+            background-color: gray;
+        }
+        :root{
+            font-size: 20px;
+        }
+        p{
+            font-size: 1rem;
+        }
+        h1{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+   <p>Hola <a href="#uno">mundo</a></p>
+   <p id="uno">UNO</p>
+   <p id="dos">DOS</p>
+   <p id="tres">TRES</p>
+</body>
+</html> 
