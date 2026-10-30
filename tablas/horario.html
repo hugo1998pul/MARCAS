@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horario</title>
+    <style>
+        table{
+        border-collapse: collapse;
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        margin-top: 50px;
+    }
+    caption{
+        background-color: beige;
+    }
+    td,th {
+        padding: 10px;
+        border: 2px solid black ;
+        text-align: center;
+    }
+    th:empty{
+        border: none;
+        background-color: white;
+    }
+    th{
+    background-color: #445b8a;
+    color: #f39200;
+    }
+    tbody tr:nth-child(1)> th{
+        border-color: black;
+    }
+    tr:nth-child(){
+        background-color: gray;
+    }
+    tr:nth-child(even){
+        background-color: white;
+    }
+    tbody th{
+        border-bottom-color: white;
+    }
+    thead th{
+        border-right-color: white;
+    }
+    thead th:last-child{
+        border-right-color: black;
+    }
+    td[colspan="5"]{ /*selector de atributo: el recreo*/
+        background-color: #445b8a;
+        color: #f39200;
+    }
+    td{
+        color: #445b8a;
+        font-weight: bold;
+    }
+    #Sistemas{
+        background-color: red;
+        color: black;
+    }
+    #programacion{
+        background-color: navajowhite;
+    }
+    #ite{
+        background-color: firebrick;
+        color: white;
+    }
+    #marca{
+        background-color: slateblue;
+        color: white;
+    }
+    #base{
+        background-color: #e6d4ff;
+    }
+    #entornos{
+        background-color: #c8f0ef;
+    }
+    #posicionamiento{
+        background-color: #00BFFF;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+     <table>
+        <caption>Horario 1 DAM</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col">Lunes</th>
+                <th scope="col">Martes</th>
+                <th scope="col">Miercoles</th>
+                <th scope="col">Jueves</th>
+                <th scope="col">Viernes</th>
+            </tr>
+        </thead>
+         <tfoot>
+            <tr>
+                <td colspan="6">Hugo</td>
+            </tr>
+        </tfoot>  
+        <tbody>
+            <tr>
+                <td>8:30-9:25</td>
+                <td rowspan="2" id="Sistemas">Sistemas informáticos</td>
+                <td id="marca">Lenguaje de Marcas y Sistemas de Gestión</td>
+                <td rowspan="2" id="programacion">Programación</td>
+                <td rowspan="2" id="ite">IPE</td>
+                <td rowspan="2" id="marca">Lenguaje de Marcas y Sistemas de Gestión</td>
+            </tr>
+            <tr>
+                <td>9:25-10:20</td>
+                <td id="ite">IPE</td>
+                
+                
+            </tr>
+            <tr>
+                <td>10:20-11:15</td>
+                <td id="programacion">Programación</td>
+                <td id="Sistemas">Sistemas informáticos</td>
+                <td id="base">Base de datos</td>
+                <td id="programacion">Programacion</td>
+                <td id="entornos">Entornos de desarrollo</td>
+            </tr>
+                <tr>
+                <td>11:15-11:45</td>
+                <td colspan="5">Recreo</td>
+            </tr>
+            <tr>
+                <td>11:45-12:40</td>
+                <td id="programacion">Programación</td>
+                <td id="Sistemas">Sistemas informáticos</td>
+                <td id="base">Base de datos</td>
+                <td id="programacion">Programacion</td>
+                <td id="entornos">Entornos de desarrollo</td>
+            </tr>
+            <tr>
+                <td>12:40-13:35</td>
+                <td rowspan="2" id="base">Base de datos</td>
+                <td rowspan="2" id="programacion">Programación</td>
+                <td rowspan="2" id="posicionamiento">Posicionamiento</td>
+                <td rowspan="2" id="base">Base de datos</td>
+                <td rowspan="2" id="Sistemas">Sistemas informáticos</td>
+            </tr>
+            <tr>
+                <td>13:35-14:30</td>
+            </tr>
+        </tbody>
+       
+    </table>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+    table{
+        border-collapse: collapse;
+        width: 50%;
+        font-size: 25px;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    td,th {        
+        padding: 10px;
+        border: 2px solid black ;
+        text-align: center;
+    }  
+    th:empty{
+        border: none;
+        background-color: white;
+    }
+    th{
+    background-color: black;
+    color: white;
+    }
+    tbody tr:nth-child(1)> th{
+        border-color: red;
+    }
+    tr:nth-child(odd){
+        background-color: gray;
+    }
+    tr:nth-child(even){
+        background-color: burlywood;
+    }
+    tbody th{
+        border-bottom-color: white;
+    }
+    thead th{
+        border-right-color: white;
+        border-right-color: white;
+    }
+    thead th:nth-last-child{
+        border-right-color: black;
+    }
+    td[colspan="2"]{ /*selector de atributo*/
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Resultados del curso 26-27</caption>
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col">Aprobados</th>
+                <th scope="col">Suspensos</th>
+                <th scope="col">No presentes</th>
+            </tr>
+        </thead>
+         <tfoot>
+            <tr>
+                <td scope="row">Total</td>
+                <td >500</td>
+                <td >700</td>
+                <td>900</td>
+            </tr>
+        </tfoot>  
+        <tbody>
+            <tr>
+                <td scope="row">DAM</td>
+                <td colspan="2">100</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td scope="row">DAW</td>
+                <td >400</td>
+                <td rowspan="2">500</td>
+                <td>600</td>
+            </tr>
+            <tr>
+                <td scope="row">ASIR</td>
+                <td>500</td>
+                <td>600</td>
+            </tr>
+                <tr>
+                <td scope="row">SMR</td>
+                <td >400</td>
+                <td >500</td>
+                <td>600</td>
+            </tr>
+        </tbody>
+       
+    </table>
+</body>
+</html>
