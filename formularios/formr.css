@@ -1,0 +1,31 @@
+form{
+    width: 600px;
+    margin: auto;
+    border: 2px solid red;
+    padding: 20px;
+}
+label , input{
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 10px;
+}
+fieldset{
+    border-color: orange;
+    margin: 20px;
+}
+legend{
+    color: red;
+}
+input[type="buttom"], input[type="summit"], input[type="reset"]{
+    border: 2px solid orange;
+    background-color: red;
+}
+input[type="buttom"]{
+    width: 90%;
+}
+textarea{
+    width: 45%;
+}
+label{
+    vertical-align: top;
+}
