@@ -51,34 +51,60 @@
         color: #f39200;
     }
     td{
-        color: #445b8a;
+        color: black;
         font-weight: bold;
     }
-    #Sistemas{
+    .sistemas{
         background-color: red;
-        color: black;
+        
     }
-    #programacion{
+    .programacion{
         background-color: navajowhite;
+        
     }
-    #ite{
-        background-color: firebrick;
+    .ite{
+        background-color: violet;
         color: white;
     }
-    #marca{
+    .marca{
         background-color: slateblue;
         color: white;
     }
-    #base{
+    .base{
         background-color: #e6d4ff;
     }
-    #entornos{
+    .entornos{
         background-color: #c8f0ef;
     }
-    #posicionamiento{
+    .posicionamiento{
         background-color: #00BFFF;
         color: white;
     }
+    td:hover{
+        background-color: seagreen;
+    }
+    .sistemas:hover{
+        background-color: slateblue;
+    }
+    .programacion{
+        background-color:#445b8a;
+    }
+    .ite:hover{
+        background-color: royalblue;
+    }
+    .marca:hover{
+        background-color: thistle;
+    }
+    .base:hover{
+        background-color: lightsalmon;
+    }
+    .entornos:hover{
+        background-color:teal ;
+    }
+    .entornos:hover{
+        background-color: silver;
+    }
+    
     </style>
 </head>
 <body>
@@ -92,6 +118,7 @@
                 <th scope="col">Miercoles</th>
                 <th scope="col">Jueves</th>
                 <th scope="col">Viernes</th>
+                <th scope="col">Profesores</th>
             </tr>
         </thead>
          <tfoot>
@@ -102,25 +129,31 @@
         <tbody>
             <tr>
                 <td>8:30-9:25</td>
-                <td rowspan="2" id="Sistemas">Sistemas informáticos</td>
-                <td id="marca">Lenguaje de Marcas y Sistemas de Gestión</td>
-                <td rowspan="2" id="programacion">Programación</td>
-                <td rowspan="2" id="ite">IPE</td>
-                <td rowspan="2" id="marca">Lenguaje de Marcas y Sistemas de Gestión</td>
+                <td rowspan="2" class="sistemas">Sistemas informáticos</td>
+                <td class="marca">Lenguaje de Marcas y Sistemas de Gestión</td>
+                <td rowspan="2" class="programacion">Programación</td>
+                <td rowspan="2" class="ite">IPE</td>
+                <td rowspan="2" class="marca">Lenguaje de Marcas y Sistemas de Gestión</td>
+                <td rowspan="7">
+                    <p id="valentin">Valentín</p>
+                    <p id="sergio">Sergio</p>
+                    <p id="graciela">Graciela</p>
+                    <p id="carlos">Carlos</p>
+                    <p id="damian">Damián</p>
+                    <p id="maria">María</p>
+                </td>
             </tr>
             <tr>
                 <td>9:25-10:20</td>
-                <td id="ite">IPE</td>
-                
-                
+                <td class="ite">IPE</td>
             </tr>
             <tr>
                 <td>10:20-11:15</td>
-                <td id="programacion">Programación</td>
-                <td id="Sistemas">Sistemas informáticos</td>
-                <td id="base">Base de datos</td>
-                <td id="programacion">Programacion</td>
-                <td id="entornos">Entornos de desarrollo</td>
+                <td class="programacion">Programación</td>
+                <td class="sistemas">Sistemas informáticos</td>
+                <td class="base">Base de datos</td>
+                <td class="programacion">Programacion</td>
+                <td class="entornos">Entornos de desarrollo</td>
             </tr>
                 <tr>
                 <td>11:15-11:45</td>
@@ -128,23 +161,24 @@
             </tr>
             <tr>
                 <td>11:45-12:40</td>
-                <td id="programacion">Programación</td>
-                <td id="Sistemas">Sistemas informáticos</td>
-                <td id="base">Base de datos</td>
-                <td id="programacion">Programacion</td>
-                <td id="entornos">Entornos de desarrollo</td>
+                <td class="programacion">Programación</td>
+                <td class="sistemas">Sistemas informáticos</td>
+                <td class="base">Base de datos</td>
+                <td class="programacion">Programacion</td>
+                <td class="entornos">Entornos de desarrollo</td>
             </tr>
             <tr>
                 <td>12:40-13:35</td>
-                <td rowspan="2" id="base">Base de datos</td>
-                <td rowspan="2" id="programacion">Programación</td>
-                <td rowspan="2" id="posicionamiento">Posicionamiento</td>
-                <td rowspan="2" id="base">Base de datos</td>
-                <td rowspan="2" id="Sistemas">Sistemas informáticos</td>
+                <td rowspan="2" class="base">Base de datos</td>
+                <td rowspan="2" class="programacion">Programación</td>
+                <td rowspan="2" class="posicionamiento">Posicionamiento</td>
+                <td rowspan="2" class="base">Base de datos</td>
+                <td rowspan="2" class="sistemas">Sistemas informáticos</td>
             </tr>
             <tr>
                 <td>13:35-14:30</td>
             </tr>
+            
         </tbody>
        
     </table>
