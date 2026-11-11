@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <title>Formulario empleo</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>ESTUDIANTES por el mundo</h1>
+            <ol>
+                <li><a href="#personales">Datos personales</a></li>
+                <li><a href="#edad">Edades</a></li>
+                <li><a href="#contacto">Datos de contacto</a></li>
+                <li><a href="#ciudad">Ciudades</a></li>
+                <li><a href="#otros">Otros</a></li>
+            </ol>
+        </nav>
+    </header>
+      
+    <form action="#" method="post" enctype="multipart/form-data" oninput="resultado, value=salaria.value">
+        <fieldset id="personales">
+        <legend >Datos personales</legend>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Su nombre aquii" required size="50">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Su apellido aquii" required size="50">
+        <label for="Nacionalidad">Nacionalidad</label>
+        <select name="Nacionalidad" id="nacionalidad">Nacionalidad
+            <option value="Española">Española</option>
+            <option value="Frances">Frances</option>
+            <option value="Italiano">Italiano</option>
+            <option value="Portugues">Portugues</option>
+            <option value="Alemán">Alemán</option>
+        </select>
+        <label for="cita">Fecha medica</label>
+        <input type="datetime-local" name="cita" id="cita">
+        <label for="contraseña">Contraseña</label>
+        <input type="password" name="contraseña" id="contraseña" placeholder="******">
+        </fieldset>
+        <fieldset id="edad">
+        <legend>Grupo de Edad</legend>
+            <input type="radio">
+            <label for="menos de 20">Menos de 20</label>
+            <input type="radio">
+            <label for="entre2050">Entre 20 y 50</label>
+            <input type="radio">
+            <label for="mEntre5060">Entre 50 60</label>
+            <input type="radio">
+            <label for="Mas60">Mas 60</label>
+            
+        </fieldset>
+        <fieldset id="contacto">
+        <legend>Datos de contactos</legend>
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" placeholder="usuario@domino.es">
+            <label for="telefono">telefono</label>
+            <input type="number" id="telefono" name="telefono" placeholder="644956875">
+            <label for="direccion">Direccion</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Su dirección aqui" required size="50">
+            <label for="codigo">Codigo postal</label>
+            <input type="number" id="codigo" name="codigo" placeholder="Su codigo aqui">
+            <label for="Ciudad">Ciudad</label>
+            <select name="Nacionalidad" id="nacionalidad" multiple size="4">Nacionalidad
+                <optgroup label="">
+                    <option value="Española">Madrid</option>
+                    <option value="Frances">Barcelona</option>
+                    <option value="Italiano">Bilbao</option>
+                    <option value="Portugues">Valencia</option>
+                </optgroup>
+        </select>
+        </fieldset>
+        <fieldset id="ciudad">
+        <legend>Ciudades que querría visitar</legend>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">Berlin</label>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">Moscu</label>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">Nueva York</label>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">Milán</label>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">Alcorcón</label>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">San Francisco</label>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">París</label>
+            <input type="checkbox" name="ciudades" id="ciudad">
+            <label for="menos de 20">Londres</label>
+        </fieldset>
+        <fieldset id="otros">
+            <legend>Otros datos</legend>
+            <label for="fotografía">Subir fotografía:</label>
+            <input type="file" name="subir fotografía" id="subir fotografía">
+            <label for="numero">Numero favorito</label>
+            <input type="number" name="numero" id="numero favorito" placeholder="1"  <p>(del 1 al  100)</p> 
+            <label for="color">Color favorito</label>
+            <input type="color" name="color" id="Color favorito">
+            <label for="presupuesto">Presupuesto</label>
+            <input type="range" min="5" max="10" name="presupuesto" id="Presupuesto">
+            <label for="Instagram">Instagram</label>
+            <input type="url" name="Instagram" id="Instagram" placeholder="https://www.instagram.com/usuario">
+            <label for="Comentarios">Comentarios</label>
+            <textarea name="Comentarios" id="Comentarios" placeholder="Aprovecha esta caja para contarnos tu vida si te aburres"  rows="8" cols="100"></textarea>
+        </fieldset>
+        <fieldset id="opciones">
+            <input type="submit" name="Enviar" id="Enviar" value="Enviar">
+            <input type="reset" name="Borrar" id="Borrar" value="Borrar">
+        </fieldset>
+        
+    </form>
+    <footer>
+        <p>No nos hacemos responsables de tus datos, si se pierden, se siente.
+</p>
+    </footer>
+</body>
+</html>
