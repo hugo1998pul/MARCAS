@@ -45,15 +45,10 @@
         </fieldset>
         <fieldset id="edad">
         <legend>Grupo de Edad</legend>
-            <input type="radio">
-            <label for="menos de 20">Menos de 20</label>
-            <input type="radio">
-            <label for="entre2050">Entre 20 y 50</label>
-            <input type="radio">
-            <label for="mEntre5060">Entre 50 60</label>
-            <input type="radio">
-            <label for="Mas60">Mas 60</label>
-            
+            <label><input type="radio" name="edad" value="Menos de 20"> Menos de 20</label>
+            <label><input type="radio" name="edad" value="Menos de 20"> Entre 20 y 50</label>
+            <label><input type="radio" name="edad" value="Menos de 20"> Entre 50 y 60</label>
+            <label><input type="radio" name="edad" value="Menos de 20"> Más de 60</label>
         </fieldset>
         <fieldset id="contacto">
         <legend>Datos de contactos</legend>
@@ -76,30 +71,22 @@
         </select>
         </fieldset>
         <fieldset id="ciudad">
-        <legend>Ciudades que querría visitar</legend>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">Berlin</label>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">Moscu</label>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">Nueva York</label>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">Milán</label>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">Alcorcón</label>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">San Francisco</label>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">París</label>
-            <input type="checkbox" name="ciudades" id="ciudad">
-            <label for="menos de 20">Londres</label>
+        <legend>Ciudades que quería visitar</legend>
+            <label><input type="checkbox" name="ciudades" value="Berlin"> Berlin</label>
+            <label><input type="checkbox" name="ciudades" value="Berlin"> Moscu</label>
+            <label><input type="checkbox" name="ciudades" value="Berlin"> Nueva York</label>
+            <label><input type="checkbox" name="ciudades" value="Berlin"> Milán</label>
+            <label><input type="checkbox" name="ciudades" value="Berlin"> Alcorcón</label>
+            <label><input type="checkbox" name="ciudades" value="Berlin">San Francisco</label>
+            <label><input type="checkbox" name="ciudades" value="Berlin"> París</label>
+            <label><input type="checkbox" name="ciudades" value="Berlin"> Londres</label>
         </fieldset>
         <fieldset id="otros">
             <legend>Otros datos</legend>
             <label for="fotografía">Subir fotografía:</label>
             <input type="file" name="subir fotografía" id="subir fotografía">
             <label for="numero">Numero favorito</label>
-            <input type="number" name="numero" id="numero favorito" placeholder="1"  <p>(del 1 al  100)</p> 
+           <input type="number" name="numero" id="numero" placeholder="1">
             <label for="color">Color favorito</label>
             <input type="color" name="color" id="Color favorito">
             <label for="presupuesto">Presupuesto</label>
@@ -107,7 +94,7 @@
             <label for="Instagram">Instagram</label>
             <input type="url" name="Instagram" id="Instagram" placeholder="https://www.instagram.com/usuario">
             <label for="Comentarios">Comentarios</label>
-            <textarea name="Comentarios" id="Comentarios" placeholder="Aprovecha esta caja para contarnos tu vida si te aburres"  rows="8" cols="100"></textarea>
+            <textarea name="Comentarios" id="Comentarios" placeholder="Aprovecha esta caja para contarnos tu vida si te aburres"  rows="8" cols="20"></textarea>
         </fieldset>
         <fieldset id="opciones">
             <input type="submit" name="Enviar" id="Enviar" value="Enviar">
